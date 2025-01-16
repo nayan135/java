@@ -12,13 +12,13 @@ public class transpose {
         System.out.println("Enter the number of columns:");
         cols = scanner.nextInt();
         arr = new int[rows][cols];
-        System.out.println("Enter the elements of the first array:");
+        System.out.println("Enter the elements of the first Matrix:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 arr[i][j] = scanner.nextInt();
             }
         }
-        System.out.println("The first array is:");
+        System.out.println("The first MAtrix is:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 System.out.print(arr[i][j] + " ");
@@ -26,6 +26,7 @@ public class transpose {
             System.out.println();
         }
 
+        System.out.println("The transpose of the Matrix is:");
         for (int j = 0; j < rows; j++) {
             for (int i = 0; i < cols; i++) {
                 System.out.print(arr[i][j] + " ");
@@ -37,7 +38,6 @@ public class transpose {
     public static void main(String[] args) {
         transpose obj = new transpose();
         obj.entry();
-       
 
     }
 }
