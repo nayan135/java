@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Matrix {
+public class matrixx {
     int[][] data;
 
     void inputData() {
