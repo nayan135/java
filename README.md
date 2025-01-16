@@ -6,4 +6,4 @@ The workspace contains two folders by default, where:
 
 - `src`: the folder to maintain sources
 
-##CHANGES ARE ALWAYS ACCEPTED
+## CHANGES ARE ALWAYS ACCEPTED
