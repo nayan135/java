@@ -30,7 +30,7 @@ void ser(){
 }
 }
 void sorrt(){
-    String s="";
+    String s;
     System.out.println("Enter char to sort");
     s = sc.nextLine();
     char[] arr = str.toCharArray();
