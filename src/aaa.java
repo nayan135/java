@@ -18,7 +18,6 @@ public class aaa {
         }
         System.out.println("Sum of entered numbers: " + sum);
     }
-    
 
     void matrixmultiplication() {
         System.out.println("Enter the size of the first matrix:");
