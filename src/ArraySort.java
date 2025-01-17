@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-    int[] array;
-    int size;
+public class ArraySort {
+    public int[] array;
+    public int size;
 
     void sortArray() {
         for (int i = 0; i < array.length; i++) {
@@ -12,12 +13,14 @@ import java.util.Scanner;
                     array[j] = temp;
                 }
             }
-         
-        System.out.print(array[i] + " ");
-    }System.out.println();
+
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
+
         ArraySort na = new ArraySort();
         Scanner scanner = new Scanner(System.in);
 
@@ -29,12 +32,8 @@ import java.util.Scanner;
             na.array[i] = scanner.nextInt();
         }
 
-        System.out.println("Original array: ");
-        na.printArray();
-        na.sortArray();
-
         System.out.println("Sorted array: ");
-        na.printArray();
+        na.sortArray();
 
         scanner.close();
     }
