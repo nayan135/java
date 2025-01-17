@@ -2,11 +2,15 @@ import java.util.*;
 
 public class strtoarray {
     void fun() {
-        // string lai sort garni
+
         String na = "Nayan";
-        char[] arr = na.toCharArray();
+        // reverse the string
+        String reverse = new StringBuffer(na).reverse().toString();
+        System.out.println(reverse);
 
         // sort the arrayy
+        char[] arr = na.toCharArray();
+
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
         // string ko array lai sort garni
