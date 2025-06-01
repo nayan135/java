@@ -2,20 +2,23 @@ import java.util.Scanner;
 
 public class vowelconsonent {
     Scanner sc = new Scanner(System.in);
-    char ch;
+    String input;
+    char ch[];
 
     void input() {
         System.out.println("Enter char to check if it is vowel or consonent");
-        ch = sc.next().charAt(0);
-
+        input = sc.nextLine();
+        ch = input.toCharArray();
     }
 
     void vowelcheck() {
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
-                ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
-            System.out.println("The character is a vowel.");
-        } else {
-            System.out.println("The character is a consonant.");
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u' ||
+                    ch[i] == 'A' || ch[i] == 'E' || ch[i] == 'I' || ch[i] == 'O' || ch[i] == 'U') {
+                System.out.println(ch[i] + " is a vowel");
+            } else {
+                System.out.println(ch[i] + " is a consonant");
+            }
         }
 
     }
