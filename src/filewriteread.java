@@ -32,7 +32,7 @@ public class filewriteread {
             }
 
             br.close();
-            reader.close();
+            reader.close(); q
         } catch (IOException e) {
             System.out.println("An error occurred while reading: " + e.getMessage());
         }
