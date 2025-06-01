@@ -6,18 +6,23 @@ public class filewriteread {
     String filename = "data.txt";
 
     void writeToFile() {
+        String input = "";
         try {
-            System.out.print("Enter a line to save in file: ");
-            String input = sc.nextLine();
-
             FileWriter writer = new FileWriter(filename);
-            writer.write(input);
-            writer.close();
+            System.out.println("Enter text (type 'exit' to finish):");
 
-            System.out.println("Successfully written to file.");
+            while (true) {
+                String line = sc.nextLine();
+                if (line.equalsIgnoreCase("exit")) break;
+                writer.write(line + "\n");
+            }
+
+            writer.close();
+            System.out.println("Data saved to file.");
         } catch (IOException e) {
-            System.out.println("An error occurred while writing: " + e.getMessage());
+            System.out.println("Error writing to file: " + e.getMessage());
         }
+
     }
 
     void readFromFile() {
@@ -32,7 +37,7 @@ public class filewriteread {
             }
 
             br.close();
-            reader.close(); q
+            reader.close();
         } catch (IOException e) {
             System.out.println("An error occurred while reading: " + e.getMessage());
         }
