@@ -3,7 +3,7 @@ import java.io.*;
 
 public class filewriteread {
     Scanner sc = new Scanner(System.in);
-    String filename = "data.txt"; 
+    String filename = "data.txt";
 
     void writeToFile() {
         try {
