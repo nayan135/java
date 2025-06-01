@@ -2,19 +2,45 @@ import java.util.Scanner;
 import java.io.*;
 
 public class whatiknow {
-    // io steam from user input
     Scanner sc = new Scanner(System.in);
-    Reader re = new InputStreamReader(System.in);
+    String filename = "data.txt"; // File to write and read
 
-    void input() {
-        System.out.println("Enter a number:");
-        String s = sc.nextLine();
-        System.out.println("You entered: " + s);
+    void writeToFile() {
+        try {
+            System.out.print("Enter a line to save in file: ");
+            String input = sc.nextLine();
 
+            FileWriter writer = new FileWriter(filename);
+            writer.write(input);
+            writer.close();
+
+            System.out.println("Successfully written to file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing: " + e.getMessage());
+        }
+    }
+
+    void readFromFile() {
+        try {
+            FileReader reader = new FileReader(filename);
+            BufferedReader br = new BufferedReader(reader);
+
+            System.out.println("Reading from file:");
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            br.close();
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading: " + e.getMessage());
+        }
     }
 
     public static void main(String[] args) {
-
+        whatiknow obj = new whatiknow();
+        obj.writeToFile();
+        obj.readFromFile();
     }
-
 }
