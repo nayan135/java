@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class whatiknow {
+public class filewriteread {
     Scanner sc = new Scanner(System.in);
     String filename = "data.txt"; // File to write and read
 
@@ -39,7 +39,7 @@ public class whatiknow {
     }
 
     public static void main(String[] args) {
-        whatiknow obj = new whatiknow();
+        filewriteread obj = new filewriteread();
         obj.writeToFile();
         obj.readFromFile();
     }
